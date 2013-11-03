@@ -16,4 +16,10 @@ $CC -s -Os -W -Wall -Iioctl -Imisc -I. \
     ioctl/libdm-iface.c
 $AR cr libdevmapper.a *.o
 $RANLIB libdevmapper.a
+
+$CC -s -Os -W -Wall -Iioctl -Imisc -I. \
+    -DHAVE_SYS_STATVFS_H -DHAVE_SYS_IOCTL_H -DHAVE_TERMIOS_H -DHAVE_GETLINE \
+    -DHAVE_GETOPTLONG \
+    -Wno-unused-parameter \
+    -o dmsetup dmsetup.c libdevmapper.a
 : c.sh OK.
