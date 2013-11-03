@@ -1,4 +1,4 @@
-#! /bin/bash --
+#! /bin/sh --
 BINPREFIX='/home/pts/prg/pts-mini-gpl/uevalrun/cross-compiler/bin/i686-'
 CC="${BINPREFIX}gcc -static -fno-stack-protector"
 AR="${BINPREFIX}ar"
