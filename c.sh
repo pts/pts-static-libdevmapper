@@ -8,7 +8,7 @@ set -ex
 rm -f *.o *.a
 # No -DUDEV_SYNC_SUPPORT
 $CC -s -Os -W -Wall -Iioctl -Imisc -I. \
-    -c \
+    -DDM_IOCTLS -c \
     -Wno-unused-parameter -Wno-sign-compare \
     datastruct/bitset.c datastruct/hash.c datastruct/list.c libdm-common.c \
     libdm-file.c libdm-deptree.c libdm-string.c libdm-report.c \
