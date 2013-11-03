@@ -5,7 +5,7 @@ AR="${BINPREFIX}ar"
 RANLIB="${BINPREFIX}ranlib"
 
 set -ex
-rm -f *.o *.a
+rm -f *.o *.a dmsetup
 # No -DUDEV_SYNC_SUPPORT
 $CC -s -Os -W -Wall -Iioctl -Imisc -I. \
     -DDM_IOCTLS -c \
